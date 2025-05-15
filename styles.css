@@ -1,14 +1,22 @@
 body {
   font-family: Georgia, serif;
-  background-color: #fdf7f2;
-  color: #40332f;
+  background-color: #292524; 
+  color: #f3ede7;
   margin: 0;
   padding: 2rem;
 }
 
 a {
-  color: #5a4c44;
+  color: #d2bba0;
   text-decoration: underline;
+}
+
+a:hover {
+  color: #f3ede7;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, li, strong, em {
+  color: inherit;
 }
 
 .container {
@@ -28,10 +36,59 @@ a {
 }
 
 .timeline {
-  border-left: 2px solid #bcaea1;
-  padding-left: 1rem;
-  margin-top: 2rem;
+  position: relative;
+  margin-left: 40px; /* spacing to the left of the content */
 }
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0; /* line starts at the far left of the timeline block */
+  width: 2px;
+  height: 100%;
+  background-color: #a67c6b; /* vertical line color */
+}
+
+.entry {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2.5rem;
+}
+
+.dot {
+  position: absolute;
+  left: -3.5px; /* center of the dot aligns with the line (2px wide) */
+  top: 0.4em;
+  width: 10px;
+  height: 10px;
+  background-color: #a67c6b;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.content {
+  padding-left: 20px; /* space between dot and text */
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #f9f5f0;
+  margin-bottom: 0.3rem;
+}
+
+.meta {
+  font-size: 1rem;
+  color: #f3ede7;
+  line-height: 1.5;
+}
+
+body {
+  background-color: #1e1a19; /* dark background */
+}
+
 
 .entry {
   margin-bottom: 1.5rem;
@@ -42,70 +99,197 @@ a {
   font-size: 1.1rem;
 }
 
-.meta {
-  color: #9e8f84;
-  font-size: 0.9rem;
+.hover-popup {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .hover-popup .popup-text {
+    visibility: hidden;
+    opacity: 0;
+    background-color: #f3ede7;
+    color: #292524;
+    font-family: Georgia, serif;
+    text-align: left;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 140%;
+    left: 0;
+    z-index: 999;
+    transition: opacity 0.3s ease;
+    line-height: 1.6;
+
+    /* autosize to fit onto user's screens - FIGURE OUT */
+    
+    /* 👇 Adjust width here */
+    width: 350px;
+    max-width: 80vw;
+    white-space: normal;
+
+    /* 👇 Adjust fothat int size here */
+    font-size: 12px; /* You can change this value to anything you like */
+
+  }
+  
+  .hover-popup:hover .popup-text {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .hover-popup .popup-text {
+    pointer-events: auto;
+  }
+
+  .hover-popup:hover .popup-text,
+  .hover-popup .popup-text:hover {
+  visibility: visible;
+  opacity: 1;
+    }
+
+  .popup-text { /* allows popup to be scrollable if too tall */
+    max-height: 80vh; /* never taller than 80% of the viewport height */
+    overflow-y: auto; /* allows vertical scrolling */
+  }
+
+  .projects-wrapper {
+    display: flex;
+    flex-wrap: nowrap; /* prevent wrapping */
+    gap: 2rem;
+    align-items: flex-start; /* keep aligned at top */
+  }  
+  
+  .project-section {
+    flex: 1 1 300px; /* Grow, shrink, base width */
+    max-width: 40%;
+  }
+  
+  .project-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .project-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.15rem 0.75rem;   /* cut the top/bottom padding */
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .project-list li {
+    margin-bottom: 0.10rem;    /* tighten vertical gap */
+  }
+  
+  .project-item:hover,
+.project-item.active {
+  background-color: #e7dfd6;
+  color: #292524; /* Dark brown that fits your palette */
 }
 
-.content {
-  width: 70%;
+.project-item:hover .project-title,
+.project-item.active .project-title,
+.project-item:hover .project-year,
+.project-item.active .project-year {
+  color: #292524;
 }
+  
+  .project-detail-card {
+    background-color: #3b2f2b;
+    color: #f3ede7;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border: 1px solid #5c453a;
+  
+    flex: 1; /* 🟢 Takes all available space */
+    max-width: 100%; /* 🟢 Ensures no overflow */
+    box-sizing: border-box;
+  }
+  
+  .project-detail-card h4 {
+    margin-top: 0;
+  }
+  
+  .project-meta,
+  .project-links {
+    margin-top: 1rem;
+  }
 
-.content section {
-  margin-bottom: 3rem;
+  .project-links a {
+    text-decoration: none; /* Removes underline */
+  }
+
+  .project-links a:hover {
+    text-decoration: underline; /* Optional: underline when hovered */
+  }
+  
+  .badge {
+    background-color: #7c6454;
+    color: #fff;
+    padding: 0.3rem 0.6rem;
+    border-radius: 8px;
+    margin-right: 0.5rem;
+    font-size: 0.8rem;
+    display: inline-block;
+  }
+
+  /* Unbold the project titles */
+  .project-title {
+    font-weight: normal;
+    font-size: 0.9rem; /* or smaller if needed */
+  }
+  
+  
+  /* Unbold the section headers (like "research", "writing") */
+  .project-section h3 {
+    font-weight: normal;
+  }
+
+
+  /* Mobile-friendly layout */
+
+@media (max-width: 768px) {
+
+  /* Stack the main container vertically */
+  .container {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  /* Make sidebar take full width */
+  .sidebar {
+    width: 100%;
+  }
+
+  /* Make project sections stack */
+  .projects-wrapper {
+    flex-direction: column;
+  }
+
+  .project-section {
+    min-width: 100%;
+  }
+
+  /* Full width for detail card */
+  .project-detail-card {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Make popup descriptions more readable */
+  .hover-popup .popup-text {
+    left: 0;
+    right: auto;
+    width: 100%;
+    max-width: 100%;
+    font-size: 14px;
+    top: 110%; /* position below the item */
+
+  }
+
 }
-
-h2 {
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 0.5rem;
-}
-
-h3 {
-  font-size: 1.1rem;
-  margin-top: 1.2rem;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-ul li {
-  margin-bottom: 0.3rem;
-}
-
-.card {
-  background: #f3ede7;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  margin-top: 1rem;
-}
-
-.card h4 {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-.card p {
-  font-size: 0.9rem;
-  line-height: 1.4;
-}
-
-.tags {
-  margin-top: 0.5rem;
-  font-size: 0.8rem;
-  color: #9e8f84;
-  display: flex;
-  gap: 0.5rem;
-}
-
-.tag {
-  background: #bcaea1;
-  color: white;
-  padding: 0.2rem 0.5rem;
-  border-radius: 9999px;
-}
-

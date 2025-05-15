@@ -1,3 +1,4 @@
+                              
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,62 +11,228 @@
   <div class="container">
     <aside class="sidebar">
       <h1>Nora O'Toole</h1>
-      <p>Passionate about emerging <br> technologies,policy,and government</p>
+      <p>passionate about technology, <br>policy, and government</p>
 
       <div class="timeline">
         <div class="entry">
-          <div class="role">cybersecurity</div>
-          <div class="meta">city of pittsburgh<br>2025</div>
+          <div class="dot"></div>
+          <div class="content">
+            <div class="title">cybersecurity</div>
+            <div class="meta">city of pittsburgh<br>2025</div>
+          </div>
         </div>
         <div class="entry">
-          <div class="role">advocacy</div>
-          <div class="meta">penn state student body president<br>2023</div>
+          <div class="dot"></div>
+          <div class="content">
+            <div class="title">advocacy</div>
+            <div class="meta">penn state student body president<br>2024</div>
+          </div>
         </div>
         <div class="entry">
-          <div class="role">policy</div>
-          <div class="meta">dhs cisa<br>2023</div>
+          <div class="dot"></div>
+          <div class="content">
+            <div class="title">policy</div>
+            <div class="meta">dhs cisa<br>2023</div>
+          </div>
         </div>
         <div class="entry">
-          <div class="role">research</div>
-          <div class="meta">penn state university<br>2022</div>
+          <div class="dot"></div>
+          <div class="content">
+            <div class="title">research</div>
+            <div class="meta">penn state university<br>montana state university<br>2023</div>
+          </div>
         </div>
-        <!-- Add more entries as needed -->
+        <div class="entry">
+          <div class="dot"></div>
+          <div class="content">
+            <div class="title">fellow</div>
+            <div class="meta">presidential leadership academy<br>2022</div>
+          </div>
+        </div>
       </div>
+      
     </aside>
 
     <main class="content">
       <section>
         <h2>CURRENTLY</h2>
+        <!-- <li>articulating <a href="https://myblog.example.com" target="_blank">my thoughts</a></li> -->
         <ul>
-          <li>learning within local government</li>
-          <li>articulating <a href="#">my thoughts</a></li>
-          <li>lurking on <a href="#">linkedin</a></li>
-          <li>reading <a href="#">the world as it is by ben rhodes</a></li>
+          <li>growing within local government</li>
+          <li>articulating <a href="https://noraotoole.substack.com" target="_blank">my thoughts</a></li>
+          <li>lurking on <a href="https://www.linkedin.com/in/noraotoole/">linkedin</a></li>
+
+          <li>
+            reading 
+            <span class="hover-popup">
+              <a href="#">king henry vi by william shakespeare</a>
+              <span class="popup-text right-align-popup">
+                <strong>my library</strong><br><br>
+          
+                <strong>2025</strong><br>
+                the world as it is by ben rhodes<br>
+                alexander hamilton — ron chernow<br>
+                common sense - thomas paine<br>
+                the defining decade: why your twenties matter and how to make the most of them now - meg jay<br>
+                the dragon republic — r.f. kuang<br>
+                the poppy war - r.f. kuang<br><br>
+          
+                <strong>2024</strong><br>
+                washington's spies: the story of america's first spy ring - alexander rose<br>
+                song of achilles — madeline miller<br>
+                a court of thorns and roses series - sarah j. maas
+                iron flame - rebecca yarros<br>
+                fourth wing - rebecca yarros<br><br>
+
+                <strong>2023</strong><br>
+                the best land under heaven: the donner party in the age of manifest destiny - michael wallis<br>
+                left of boom: how a young cia case officer penetrated the taliban and al-qaeda - douglas laux & ralph pezzullo <br>
+                
+              </span>
+            </span>
+          </li>
+
           <li>located in pittsburgh</li>
         </ul>
       </section>
-
+      
       <section>
         <h2>PROJECTS</h2>
-        <h3>research</h3>
-        <ul>
-          <li>international privacy law corpus <span>2022</span></li>
-          <li>scam emails at universities <span>2021</span></li>
-        </ul>
+      
+        <div class="projects-wrapper">
+          <div class="project-section">
+            <h3>research</h3>
+            <ul class="project-list">
+              <li class="project-item" data-title="creation and analysis of an international corpus of privacy laws"
+                  data-year="2022"
+                  data-description="Built the Government Privacy Instructions Corpus, or GPI Corpus, that enables a large-scale quantitative and qualitative examination of legal foci on privacy."
+                  data-tags='{"publication":"https://arxiv.org/pdf/2206.14169"}'>
+                <span class="project-title">international corpus of privacy laws</span>
+                <span class="project-year">2022</span>
+              </li>
+              <li class="project-item" data-title="continuous time bayesian network models for security problems"
+                  data-year="2022"
+                  data-description="Drew upon ideas related to the relationship between vulnerabilities of a system to potential attacks and relate corresponding scenarios to an iterated zero-sum game (using a set of conditional Markov processes, or more generally, a time continuous Bayesian network)."
+                  data-tags='{"poster":"https://drive.google.com/file/d/1yZN9zueTE4lWC9Kou38I-XZ4gBgZsnYb/view?usp=sharing"}'>
+                <span class="project-title">game theory in cybersecurity</span>
+                <span class="project-year">2022</span>
+              </li>
+              <li class="project-item" data-title="comparing scam emails and user education at universities"
+                  data-year="2021"
+                  data-description="Examined the differences between scams that undergraduate students within the Big Ten Conference receive and security training materials their institutions provide. "
+                  data-tags='{"publication":"https://www.usenix.org/system/files/soups21-abstract-poster60-pan.pdf"}'>
+                <span class="project-title">scam emails at universities</span>
+                <span class="project-year">2021</span>
+              </li>
+              <!-- Add more <li> as needed -->
+            </ul>
 
-        <div class="card">
-          <h4>vq-vae for tokenization</h4>
-          <p>
-            Over the summer, at Kempner, Theo and I built a VQ-VAE model for learnable tokenization...
-          </p>
-          <div class="tags">
-            <span>📅 2024</span>
-            <span class="tag">poster</span>
+            <h4>writing</h4>
+            <ul class="project-list">
+              <li class="project-item" data-title="an investigation into the legality of generative ai"
+                  data-year="2023"
+                  data-description="I wrote this paper to investigate the emerging legal challenges surrounding generative AI, particularly in relation to copyright laws and intellectual property."
+                  data-tags='{"paper":"https://docs.google.com/document/d/14PiZ3HWbSLdJlUZXhPWjV0W_UW5O4-0DM_UBLNOclhI/edit?usp=sharing"}'>
+                <span class="project-title">legality of generative ai</span>
+                <span class="project-year">2023</span>
+              </li>
+
+              <li class="project-item" data-title="exploring digital privacy in litigation: a case brief on romano v. steelcase and social media evidence"
+                  data-year="2023"
+                  data-description="This paper explores the legal implications of privacy rights in the context of social media, specifically focusing on the Romano v. Steelcase case. This case raises important questions about how private social media posts are treated in legal proceedings and whether they are protected under the Fourth Amendment."
+                  data-tags='{"paper":"https://docs.google.com/document/d/1DpSQ0Ala0J3EK84mIh-MOAx0PXfI8bQOzc0lOywqiM8/edit?usp=sharing"}'>
+                <span class="project-title">digital privacy in litigation</span>
+                <span class="project-year">2023</span>
+              </li>
+
+              <li class="project-item" data-title="comprehensive security assessment and recommendations for aztek corporation"
+                  data-year="2022"
+                  data-description="Tasked with conducting a comprehensive security assessment of AZTek Corporation, I prepared an executive briefing outlining the results and actionable recommendations to address vulnerabilities."
+                  data-tags='{"paper":"https://docs.google.com/document/d/1vXmmCwT5utgroOvuod258_2Y-bykofCxPC2yb4wBCjU/edit?usp=sharing"}'>
+                <span class="project-title">ml-driven security evaluation</span>
+                <span class="project-year">2022</span>
+              </li>
+
+              <li class="project-item" data-title="the silk road network: an analysis of illicit networks and international threats"
+                  data-year="2021"
+                  data-description="Analyzed the rise and fall of the Silk Road, examining the platform's operations and its impact on global crime."
+                  data-tags='{"paper":"https://docs.google.com/document/d/1jbnA4JfSNjgDmWP54oLLT-Rc5QEOLK22wY8-87IJFD8/edit?usp=sharing"}'>
+                <span class="project-title">illicit networks and international threats</span>
+                <span class="project-year">2021</span>
+              </li>
+              
+              <!-- Add more <li> as needed -->
+            </ul>
+
+            <h4>cybersecurity</h4>
+            <ul class="project-list">
+              <li class="project-item" data-title="cyber forensic examination: system analysis"
+                  data-year="2023"
+                  data-description="This report was written to present a forensic examination of Barry Jones, providing evidence that supports charges against him for illegal drug possession, sales, and involvement with the dark web."
+                  data-tags='{"report":"https://docs.google.com/document/d/1GzLL64dBU9mwnLLUQY3HUGtQJQmJzMncgss6hfCW37A/edit?usp=sharing"}'>
+                <span class="project-title">cyber forensics</span>
+                <span class="project-year">2023</span>
+              </li>
+              <li class="project-item" data-title="advanced static analysis: utilizing disassemby and identification of a keylogger"
+                  data-year="2023"
+                  data-description="Performed an advanced static analysis of an executable to uncover its malicious functionality. Using tools such as PEiD and IDA Pro, the analysis aimed to determine whether the binary had been packed, traced its execution flow, and identified signs of malicious behavior. Through disassembly and examination of registry interactions and API imports, the analysis ultimately revealed that the malware functions as a keylogger attempting to inject a DLL into another process to monitor keyboard activity."
+                  data-tags='{"paper":"https://docs.google.com/document/d/1eOlmwNRzGMUAwVpZDEVbAGmcm7jaNHXgnc4JrYAql0U/edit?usp=sharing"}'>
+                <span class="project-title">disassembly and keylogger identification</span>
+                <span class="project-year">2023</span>
+              </li>
+              <li class="project-item" data-title="basic static analysis: investigating packed and obfuscated malware"
+                  data-year="2023"
+                  data-description="Documented and analyzed the behavior of a suspected malware sample using basic static and dynamic analysis techniques. The goal was to determine whether the file was malicious and understand its potential impact. Utilized tools such as VirusTotal, Strings, PEiD, Process Monitor, and RegShot."
+                  data-tags='{"paper":"https://docs.google.com/document/d/1jbnA4JfSNjgDmWP54oLLT-Rc5QEOLK22wY8-87IJFD8/edit?usp=sharing"}'>
+                <span class="project-title">packed and obfuscated malware</span>
+                <span class="project-year">2023</span>
+              </li>
+              <li class="project-item" data-title="network diagram for large corporation"
+                  data-year="2021"
+                  data-description="Created a comprehensive network diagram for a large corporation by gathering infrastructure details across sites, categorizing components into logical layers, and mapping devices such as routers, switches, servers, and cloud services."
+                  data-tags='{"poster":"https://drive.google.com/file/d/1K_L1xdtKrcGFuLBat0oefo6tNj4S-DbS/view?usp=sharing"}'>
+                <span class="project-title">network diagram for large corporation</span>
+                <span class="project-year">2021</span>
+              </li>
+              
+              <!-- Add more <li> as needed -->
+            </ul>
+          </div>
+      
+          <!-- Right-side project detail card -->
+          <div class="project-detail-card" id="project-detail">
+            <h4>Select a project</h4>
+            <p>Click a project to view details here.</p>
           </div>
         </div>
       </section>
-    </main>
-  </div>
-</body>
-</html>
+      
+      <script>
+        const projectItems = document.querySelectorAll('.project-item');
+        const detailCard = document.getElementById('project-detail');
+      
+        projectItems.forEach(item => {
+          item.addEventListener('click', () => {
+            // Remove active class from all
+            projectItems.forEach(i => i.classList.remove('active'));
+            item.classList.add('active');
+      
+            const title = item.dataset.title;
+            const year = item.dataset.year;
+            const description = item.dataset.description;
+            const tags = JSON.parse(item.dataset.tags || '{}');
+      
+            const tagLinks = Object.entries(tags).map(([label, url]) => 
+              `<a class="badge" href="${url}" target="_blank" rel="noopener noreferrer">${label}</a>`
+            ).join('');
+      
+            detailCard.innerHTML = `
+              <h4>${title}</h4>
+              <p>${description}</p>
+              <div class="project-meta">🗓️ ${year}</div>
+              <div class="project-links">${tagLinks}</div>
+            `;
+          });
+        });
+      </script>
 
