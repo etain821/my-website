@@ -35,6 +35,11 @@ h1, h2, h3, h4, h5, h6, p, span, li, strong, em {
   margin-bottom: 0.2rem;
 }
 
+.sidebar p {
+  margin-bottom: 2rem; /* Or adjust to taste */
+}
+
+
 .timeline {
   position: relative;
   margin-left: 40px; /* spacing to the left of the content */
@@ -74,13 +79,13 @@ h1, h2, h3, h4, h5, h6, p, span, li, strong, em {
 
 .title {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.0rem;
   color: #f9f5f0;
   margin-bottom: 0.3rem;
 }
 
 .meta {
-  font-size: 1rem;
+  font-size: .8rem;
   color: #f3ede7;
   line-height: 1.5;
 }
@@ -96,7 +101,7 @@ body {
 
 .role {
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: .85rem;
 }
 
 .hover-popup {
@@ -154,16 +159,13 @@ body {
   }
 
   .projects-wrapper {
-    display: flex;
-    flex-wrap: nowrap; /* prevent wrapping */
-    gap: 2rem;
-    align-items: flex-start; /* keep aligned at top */
-  }  
-  
-  .project-section {
-    flex: 1 1 300px; /* Grow, shrink, base width */
-    max-width: 40%;
-  }
+  display: flex;
+  gap: 2rem; /* optional, for spacing */
+}
+
+.project-section {
+  flex: 2;
+}
   
   .project-list {
     list-style: none;
