@@ -28,7 +28,10 @@ h1, h2, h3, h4, h5, h6, p, span, li, strong, em {
 
 .sidebar {
   width: 30%;
+  flex-shrink: 0; /* Prevent shrinking */
+  min-width: 280px; /* Optional: keeps a readable minimum width */
 }
+
 
 .sidebar h1 {
   font-size: 2rem;
@@ -59,7 +62,7 @@ h1, h2, h3, h4, h5, h6, p, span, li, strong, em {
   position: relative;
   display: flex;
   align-items: flex-start;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.5rem; /* or make 1.5?*/
 }
 
 .dot {
@@ -88,15 +91,6 @@ h1, h2, h3, h4, h5, h6, p, span, li, strong, em {
   font-size: .8rem;
   color: #f3ede7;
   line-height: 1.5;
-}
-
-body {
-  background-color: #1e1a19; /* dark background */
-}
-
-
-.entry {
-  margin-bottom: 1.5rem;
 }
 
 .role {
@@ -162,10 +156,6 @@ body {
   display: flex;
   gap: 2rem; /* optional, for spacing */
 }
-
-.project-section {
-  flex: 2;
-}
   
   .project-list {
     list-style: none;
@@ -209,6 +199,9 @@ body {
     flex: 1; /* 🟢 Takes all available space */
     max-width: 100%; /* 🟢 Ensures no overflow */
     box-sizing: border-box;
+
+    overflow-x: auto;
+    max-height: 80vh;
   }
   
   .project-detail-card h4 {
@@ -262,26 +255,15 @@ body {
     padding: 1rem;
   }
 
-  /* Make sidebar take full width */
-  .sidebar {
-    width: 100%;
-  }
-
   /* Make project sections stack */
   .projects-wrapper {
     flex-direction: column;
   }
 
   .project-section {
-    min-width: 100%;
-  }
-
-  /* Full width for detail card */
-  .project-detail-card {
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-  }
+  flex: 1; /*  Tells this to take remaining space */
+  min-width: 0; /*  Allows content inside to wrap properly instead of overflowing */
+}
 
   /* Make popup descriptions more readable */
   .hover-popup .popup-text {
@@ -293,5 +275,17 @@ body {
     top: 110%; /* position below the item */
 
   }
+
+  /*Make popup arrows or indicators*/
+  .hover-popup .popup-text::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 1rem;
+  border-width: 0 8px 8px 8px;
+  border-style: solid;
+  border-color: transparent transparent #f3ede7 transparent;
+}
+
 
 }
